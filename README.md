@@ -1,1 +1,3 @@
-# layoutfordaggvr
+- copy the code and paste it into your ABOUT ME section, any info needed should go ABOVE the code, but can go below.
+- nothing needs to be fixed, it's all tested AND works!
+- you don't need to credit
