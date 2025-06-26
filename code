@@ -1,0 +1,587 @@
+<style>
+
+* { 
+    cursor: url('https://www.cursor.cc/?action=icon&file_id=150608'), auto; 
+}
+a:hover {
+    cursor: url(https://www.cursor.cc/?action=icon&file_id=150608), auto;
+}
+
+
+:root{
+    --headers: whitesmoke;
+    --text: whitesmoke; 
+    --names: whitesmoke;
+    --links: gray;
+    --background_image: url('https://cdn.discordapp.com/attachments/1387528522259628174/1387896755546357770/wallpaperflare.com_wallpaper.jpg?ex=685f0314&is=685db194&hm=e60d871fa223be763a5eacdf139726a56d72a4b77a52740a13324e742f3e35e9&');
+  background: repeat ; 
+    --font-family: "Times", italic; 
+    --curve: 0px;
+    --borders: 2.5px solid black;
+}
+
+
+
+h3, h4, h5{color: var(--headers)!important;} 
+
+a{color: var(--links) !important;} 
+
+p, h2, .count {color: var(--text);} 
+
+.friends a p{color: var(--names);} 
+
+nav label{color: var(--links);} 
+.section h4 {color: var(--headers);} 
+
+.blurbs .heading {display:none;} 
+
+.details p:last-child{color: var(--text);} 
+
+
+
+body{
+    background-image: var(--background_image);
+    background-size: contain;
+    background-position: center;
+    background-color: dimgray;
+}
+
+h1{
+    color: #a3949b;
+    font-family: var(--font-family);
+    font-size:30px !important;
+    font-weight: 1;
+    border: var(--borders);
+    background-color: black;
+    padding:5px;
+    text-align: center;
+}
+
+
+nav{
+    background-color: black;
+    border: var(--borders);
+    border-radius: var(--curve);
+    text-align: center;
+}
+
+nav .top, nav .links {
+    background-color: transparent;
+    border-radius: var(--curve);
+}
+nav .links a{
+    text-shadow:none;
+}
+
+
+
+nav .links li:not(:last-child)::after,
+footer .links li:not(:last-child)::after{
+    content: "  ☣︎";
+    color: white;
+}
+
+nav img.logo{
+    filter: brightness(0) saturate(100%) invert(50%) sepia(5%) saturate(326%) hue-rotate(174deg) brightness(92%) contrast(82%) !important;
+}
+
+
+
+.search-wrapper input[type=text] {
+    background-color: transparent !important;
+    border: 2px solid var(--links) !important;
+    color:var(--links) !important;
+    border-radius: var(--curve) !important;
+}
+
+button{
+    border-radius: var(--curve) !important;
+    border: 0px solid var(--links) !important;
+    font-family: var(--font-family) !important;
+    background-color: transparent !important;
+    color:var(--links) !important;
+}
+
+
+
+.online{
+    color: var(--links) !important;
+    text-transform: lowercase;
+    text-align: right;
+} 
+.online img{
+    filter: brightness(0) saturate(100%) invert(50%) sepia(5%) saturate(326%) hue-rotate(174deg) brightness(92%) contrast(82%); !important;
+}
+
+
+a, p, b, nav label, .section{ 
+    font-family: var(--font-family);	
+    font-size: 12px;
+    font-weight: 1;
+    text-shadow: 0px 0px 0px black;
+}
+h2, h3, h4, h5{
+    font-family: var(--font-family);
+    font-size: 16px;
+    text-align: center;
+    font-weight: 1;
+    text-shadow: 0px 0px 0px black;
+}
+
+
+
+hr{
+    height:2px;
+    background: gray;
+    border: none;
+}
+
+
+.blurbs, .mood, .friends, .contact, .profile .table, .blog-preview, .profile .table-section{
+    border-radius: var(--curve);
+    border: var(--borders)!important;
+    background-color: black!important;
+}
+.comment-replies{border:4px groove gray;} 
+
+.comment-reply:not(:first-child){border-top: 2px solid var(--links);} 
+
+
+td{
+    background-color: transparent!important;
+}
+
+
+main{
+    background: transparent;
+    border-radius: var(--curve);
+    border: transparent;
+    outline: none;
+}
+
+
+.table-section{
+    border:none !important;
+    border-radius: var(--curve) !important;
+}
+
+
+.heading{
+    background: none !important;
+}
+
+
+.profile-info {
+    background-color: black !important;
+    border: var(--borders) !important;
+    border-radius: var(--curve) !important;
+}
+
+
+.profile-pic{
+    padding: 10px;
+}
+
+.friends-grid{
+    text-align: center;
+}
+
+
+
+h2, h3, h4, h5, p{padding-left:10px !important;} 
+.contact .heading, .profile .table-section .heading, .blog-preview .heading, .profile .friends .heading, .mood{padding: 10px!important;text-align: center;}
+.mood, .friends{margin-bottom: 10px;}
+
+.url-info{display: none;}
+.general-about .details{
+    background: black;
+    border: var(--borders);
+    padding-bottom: 70px;
+    margin-bottom: 10px;
+}
+.contact{
+    padding: 10px
+}
+.contact .f-col{
+    padding: 0px 0px 7px;
+}
+.f-row{
+    margin:0px!important;
+}
+
+
+.comments-table {
+    display: block;
+    height: 500px!important;
+    overflow-y: scroll;
+    outline: none !important;
+    border-radius: 3px;
+    border-spacing: 6px;
+    border: transparent;
+}
+.comments-table td{
+    border: 2px solid gray;
+}
+
+footer{
+    background: black;
+    border: var(--borders);
+    padding:10px;
+    margin-top: 10px;
+}
+
+</style>
+
+<style>
+/* Scrollbar styles */
+::-webkit-scrollbar {
+    width: 5px;
+    height: 12px;
+}
+::-webkit-scrollbar-track {
+    border-radius: var(--curve);
+    border: 1px solid black;
+}
+::-webkit-scrollbar-thumb {
+    background: gray; 
+    border-radius: var(--curve);
+}
+::-webkit-scrollbar-thumb:hover {
+    background: black;  
+}
+</style>
+
+<style type="text/css">body { cursor: url('data:image/x-icon;base64,AAACAAEAICAAAAAAAACoEAAAFgAAACgAAAAgAAAAQAAAAAEAIAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA1NTU/9TU1P/U1NT/1NTU/9TU1P/U1NT/1NTU/9TU1P/U1NT/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADU1NT/1NTU/8nJyf+6urr/urq6/7q6uv/Jycn/1NTU/9TU1P8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA7e3t/+3t7f/U1NT/AAAAANTU1P/Jycn/urq6/wAAAAAAAAAAAAAAALq6uv/Jycn/1NTU/wAAAADU1NT/7e3t/+3t7f8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADt7e3/7e3t/9TU1P/U1NT/1NTU/8nJyf+6urr/AAAAAAAAAAAAAAAAurq6/8nJyf/U1NT/1NTU/9TU1P/t7e3/7e3t/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOPj4//t7e3/1NTU/9TU1P/Jycn/ycnJ/7q6uv+6urr/AAAAALq6uv+6urr/ycnJ/8nJyf/U1NT/1NTU/+3t7f/j4+P/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4+Pj/+3t7f/U1NT/ycnJ/8nJyf/Jycn/urq6/wAAAAAAAAAAAAAAALq6uv/Jycn/ycnJ/8nJyf/U1NT/7e3t/+Pj4/8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADj4+P/7e3t/9TU1P/Jycn/ycnJ/8nJyf8AAAAAAAAAAAAAAAAAAAAAAAAAAMnJyf/Jycn/ycnJ/9TU1P/t7e3/4+Pj/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOPj4//t7e3/1NTU/8nJyf/Jycn/ycnJ/7q6uv8AAAAAAAAAAAAAAAC6urr/ycnJ/8nJyf/Jycn/1NTU/+3t7f/j4+P/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4+Pj/+3t7f/U1NT/ycnJ/8nJyf/Jycn/urq6/7q6uv8AAAAAurq6/7q6uv/Jycn/ycnJ/8nJyf/U1NT/7e3t/+Pj4/8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADj4+P/7e3t/9TU1P/Jycn/ycnJ/7q6uv8AAAAAAAAAAAAAAAAAAAAAAAAAALq6uv/Jycn/ycnJ/9TU1P/t7e3/4+Pj/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOPj4//t7e3/1NTU/9TU1P/Jycn/ycnJ/7q6uv+6urr/AAAAALq6uv+6urr/ycnJ/8nJyf/U1NT/1NTU/+3t7f/j4+P/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4+Pj/+3t7f/U1NT/1NTU/8nJyf/Jycn/ycnJ/7q6uv8AAAAAurq6/8nJyf/Jycn/ycnJ/9TU1P/U1NT/7e3t/+Pj4/8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADj4+P/7e3t/9TU1P/U1NT/1NTU/8nJyf/Jycn/urq6/wAAAAC6urr/ycnJ/8nJyf/U1NT/1NTU/9TU1P/t7e3/4+Pj/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOPj4//t7e3/1NTU/9TU1P/U1NT/ycnJ/8nJyf+6urr/AAAAALq6uv/Jycn/ycnJ/9TU1P/U1NT/1NTU/+3t7f/j4+P/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4+Pj/+3t7f/U1NT/1NTU/9TU1P/U1NT/urq6/wAAAAAAAAAAAAAAALq6uv/U1NT/1NTU/9TU1P/U1NT/7e3t/+Pj4/8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADj4+P/7e3t/9TU1P/U1NT/1NTU/9TU1P+6urr/AAAAAAAAAAAAAAAAurq6/9TU1P/U1NT/1NTU/9TU1P/t7e3/4+Pj/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOPj4//t7e3/1NTU/9TU1P/U1NT/1NTU/7q6uv8AAAAAAAAAAAAAAAC6urr/1NTU/9TU1P/U1NT/1NTU/+3t7f/j4+P/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4+Pj/+3t7f/U1NT/1NTU/9TU1P/U1NT/urq6/wAAAAAAAAAAAAAAALq6uv/U1NT/1NTU/9TU1P/U1NT/7e3t/+Pj4/8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADj4+P/7e3t/9TU1P/U1NT/1NTU/8nJyf/Jycn/urq6/wAAAAC6urr/ycnJ/8nJyf/U1NT/1NTU/9TU1P/t7e3/4+Pj/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOPj4//t7e3/1NTU/9TU1P/U1NT/ycnJ/8nJyf+6urr/AAAAALq6uv/Jycn/ycnJ/9TU1P/U1NT/1NTU/+3t7f/j4+P/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4+Pj/+3t7f/U1NT/1NTU/8nJyf/Jycn/ycnJ/7q6uv8AAAAAurq6/8nJyf/Jycn/ycnJ/9TU1P/U1NT/7e3t/+Pj4/8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADj4+P/7e3t/9TU1P/U1NT/ycnJ/8nJyf+6urr/urq6/wAAAAC6urr/urq6/8nJyf/Jycn/1NTU/9TU1P/t7e3/4+Pj/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOPj4//t7e3/1NTU/8nJyf/Jycn/urq6/wAAAAAAAAAAAAAAAAAAAAAAAAAAurq6/8nJyf/Jycn/1NTU/+3t7f/j4+P/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4+Pj/+3t7f/U1NT/ycnJ/8nJyf/Jycn/urq6/7q6uv8AAAAAurq6/7q6uv/Jycn/ycnJ/8nJyf/U1NT/7e3t/+Pj4/8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADj4+P/7e3t/9TU1P/Jycn/ycnJ/8nJyf+6urr/AAAAAAAAAAAAAAAAurq6/8nJyf/Jycn/ycnJ/9TU1P/t7e3/4+Pj/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAAAwAAAAMAAAAAAAAAAOPj4//t7e3/1NTU/8nJyf/Jycn/urq6/wAAAAAAAAAAAAAAAAAAAAAAAAAAurq6/8nJyf/Jycn/1NTU/+3t7f/j4+P/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAA4+Pj/+3t7f/U1NT/ycnJ/8nJyf/Jycn/urq6/wAAAAAAAAAAAAAAALq6uv/Jycn/ycnJ/8nJyf/U1NT/7e3t/+Pj4/8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADj4+P/7e3t/9TU1P/U1NT/ycnJ/8nJyf+6urr/urq6/wAAAAC6urr/urq6/8nJyf/Jycn/1NTU/9TU1P/t7e3/4+Pj/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAO3t7f/t7e3/1NTU/9TU1P/Jycn/ycnJ/7q6uv8AAAAAAAAAAAAAAAC6urr/ycnJ/8nJyf/U1NT/1NTU/+3t7f/t7e3/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAurq6/wAAAAAAAAAAAAAAAAAAAAAAAAAA7e3t/+3t7f/U1NT/AAAACNTU1P/Jycn/urq6/wAAAAAAAAAAAAAAALq6uv/Jycn/1NTU/wAAAADU1NT/7e3t/+3t7f8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC6urr/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAB1NTU/9TU1P/Jycn/urq6/7q6uv+6urr/ycnJ/9TU1P/U1NT/AAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALq6uv+6urr/urq6/wAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAADU1NT/1NTU/9TU1P/U1NT/1NTU/9TU1P/U1NT/1NTU/9TU1P8AAAAIAAAABQAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/8Af///AH//8RxH//AcB//wCAf/8BwH//A+B//wHAf/8AgH//A+B//wCAf/8AgH//AIB//wCAf/8BwH//AcB//wHAf/8BwH//AIB//wCAf/8AgH//AIB//wPgf/8AgH//AcB//wPgf/8BwH//AIB//wHAf98RxH/f8Af/x/AH/8='), auto; }
+
+
+</style>
+
+<div style="float:  ; max-height: 300px; position: fixed; left: 1px; bottom: 9px; z-index: 200;">
+<img src="https://cdn.discordapp.com/attachments/1387528662282408058/1387896745542815764/smile_dog_turntable_animation_by_dimelotu_d6fnz82.gif?ex=685f0312&is=685db192&hm=352d7a48e6b158d25e079681face2d2887e9046daac45c02b5a83c18499f9eea&" width="300" height="300"/></div> 
+
+<iframe width="0" height="0" src="https://www.youtube.com/embed/YJuCXWNtNVk?si=I0l2ZamIml56tMFP &;amp;;autoplay=1&;loop=1&;controls=1&quot;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" loading="lazy">
+</iframe>
+
+<style>
+.noise {
+position: fixed;
+top: 0;
+left: 0;
+width: 100vw;
+height: 100vh;
+overflow: hidden;
+z-index: 400;
+opacity: 0.8;
+pointer-events: none;
+opacity: 1;
+z-index: 450;
+}
+
+.noise:before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background: url('https://ice-creme.de/images/background-noise.png');
+pointer-events: none;
+will-change: background-position;
+animation: noise 1s infinite alternate;
+}
+
+.lines {
+position: fixed;
+left: 0;
+top: 0;
+width: 100vw;
+height: 100vh;
+pointer-events: none;
+z-index: 300;
+opacity: 0.6;
+will-change: opacity;
+animation: opacity 3s linear infinite;
+}
+
+.lines:before {
+content: '';
+position: absolute;
+left: 0;
+top: 0;
+right: 0;
+bottom: 0;
+pointer-events: none;
+background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, .5) 51%);
+background-size: 100% 4px;
+will-change: background, background-size;
+animation: scanlines 0.2s linear infinite;
+}
+
+.main {
+}
+
+.main .noise:before {
+background-size: 170%;
+}
+
+.main .vhs {
+position: absolute;
+left: 2rem;
+top: 2rem;
+will-change: text-shadow;
+animation: rgbText 2s steps(9) 0s infinite alternate;
+}
+
+.main .vhs .char {
+will-change: opacity;
+animation: type 1.2s infinite alternate;
+animation-delay: calc(60ms * var(--char-index));
+}
+
+.main .time {
+position: absolute;
+right: 2rem;
+top: 2rem;
+will-change: text-shadow;
+animation: rgbText 1s steps(9) 0s infinite alternate;
+}
+
+.main .glitchtext {
+will-change: text-shadow;
+animation: rgbText 1s steps(9) 0s infinite alternate;
+}
+
+@keyframes noise {
+0%,
+100% {
+background-position: 0 0;
+}
+10% {
+background-position: -5% -10%;
+}
+20% {
+background-position: -15% 5%;
+}
+30% {
+background-position: 7% -25%;
+}
+40% {
+background-position: 20% 25%;
+}
+50% {
+background-position: -25% 10%;
+}
+60% {
+background-position: 15% 5%;
+}
+70% {
+background-position: 0 15%;
+}
+80% {
+background-position: 25% 35%;
+}
+90% {
+background-position: -10% 10%;
+}
+}
+
+@keyframes opacity {
+0% {
+opacity: 0.6;
+}
+20% {
+opacity: 0.3;
+}
+35% {
+opacity: 0.5;
+}
+50% {
+opacity: 0.8;
+}
+60% {
+opacity: 0.4;
+}
+80% {
+opacity: 0.7;
+}
+100% {
+opacity: 0.6;
+}
+}
+
+@keyframes scanlines {
+from {
+background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, .5) 51%);
+background-size: 100% 4px;
+}
+to {
+background: linear-gradient(to bottom, rgba(0, 0, 0, .5) 50%, transparent 51%);
+background-size: 100% 4px;
+}
+}
+
+@keyframes rgbText {
+0% {
+text-shadow: -1px 1px 8px rgba(255, 255, 255, 0.6), 1px -1px 8px rgba(255, 255, 235, 0.7), 0px 0 1px rgba(251, 0, 231, 0.8), 0 0px 3px rgba(0, 233, 235, 0.8), 0px 0 3px rgba(0, 242, 14, 0.8), 0 0px 3px rgba(244, 45, 0, 0.8), 0px 0 3px rgba(59, 0, 226, 0.8);
+}
+25% {
+text-shadow: -1px 1px 8px rgba(255, 255, 255, 0.6), 1px -1px 8px rgba(255, 255, 235, 0.7), 0px 0 1px rgba(251, 0, 231, 0.8), 0 0px 3px rgba(0, 233, 235, 0.8), 0px 0 3px rgba(0, 242, 14, 0.8), 0 0px 3px rgba(244, 45, 0, 0.8), 0px 0 3px rgba(59, 0, 226, 0.8);
+}
+45% {
+text-shadow: -1px 1px 8px rgba(255, 255, 255, 0.6), 1px -1px 8px rgba(255, 255, 235, 0.7), 5px 0 1px rgba(251, 0, 231, 0.8), 0 5px 1px rgba(0, 233, 235, 0.8), -5px 0 1px rgba(0, 242, 14, 0.8), 0 -5px 1px rgba(244, 45, 0, 0.8), 5px 0 1px rgba(59, 0, 226, 0.8);
+}
+50% {
+text-shadow: -1px 1px 8px rgba(255, 255, 255, 0.6), 1px -1px 8px rgba(255, 255, 235, 0.7), -5px 0 1px rgba(251, 0, 231, 0.8), 0 -5px 1px rgba(0, 233, 235, 0.8), 5px 0 1px rgba(0, 242, 14, 0.8), 0 5px 1px rgba(244, 45, 0, 0.8), -5px 0 1px rgba(59, 0, 226, 0.8);
+}
+55% {
+text-shadow: -1px 1px 8px rgba(255, 255, 255, 0.6), 1px -1px 8px rgba(255, 255, 235, 0.7), 0px 0 3px rgba(251, 0, 231, 0.8), 0 0px 3px rgba(0, 233, 235, 0.8), 0px 0 3px rgba(0, 242, 14, 0.8), 0 0px 3px rgba(244, 45, 0, 0.8), 0px 0 3px rgba(59, 0, 226, 0.8);
+}
+90% {
+text-shadow: -1px 1px 8px rgba(255, 255, 255, 0.6), 1px -1px 8px rgba(255, 255, 235, 0.7), -5px 0 1px rgba(251, 0, 231, 0.8), 0 5px 1px rgba(0, 233, 235, 0.8), 5px 0 1px rgba(0, 242, 14, 0.8), 0 -5px 1px rgba(244, 45, 0, 0.8), 5px 0 1px rgba(59, 0, 226, 0.8);
+}
+100% {
+text-shadow: -1px 1px 8px rgba(255, 255, 255, 0.6), 1px -1px 8px rgba(255, 255, 235, 0.7), 5px 0 1px rgba(251, 0, 231, 0.8), 0 -5px 1px rgba(0, 233, 235, 0.8), -5px 0 1px rgba(0, 242, 14, 0.8), 0 5px 1px rgba(244, 45, 0, 0.8), -5px 0 1px rgba(59, 0, 226, 0.8);
+}
+}
+
+@keyframes type {
+0%,
+19% {
+opacity: 0;
+}
+20%,
+100% {
+opacity: 1;
+}
+}
+</style>
+<div class="lines"></div>
+<div class="main">
+<div class="noise"></div>
+
+<style>
+.rgbtxt {
+animation: rgbText 1s steps(9) 0s infinite alternate;
+animation-name: rgbText;
+animation-iteration-count: infinite;
+animation-timing-function: ease-in-out;
+}
+
+@keyframes rgbText {
+0% {
+text-shadow: -1px 1px 8px rgba(255, 255, 255, 0.6), 1px -1px 8px rgba(255, 255, 235, 0.7), 0px 0 1px rgba(251, 0, 231, 0.8), 0 0px 3px rgba(0, 233, 235, 0.8), 0px 0 3px rgba(0, 242, 14, 0.8), 0 0px 3px rgba(244, 45, 0, 0.8), 0px 0 3px rgba(59, 0, 226, 0.8);
+}
+25% {
+text-shadow: -1px 1px 8px rgba(255, 255, 255, 0.6), 1px -1px 8px rgba(255, 255, 235, 0.7), 0px 0 1px rgba(251, 0, 231, 0.8), 0 0px 3px rgba(0, 233, 235, 0.8), 0px 0 3px rgba(0, 242, 14, 0.8), 0 0px 3px rgba(244, 45, 0, 0.8), 0px 0 3px rgba(59, 0, 226, 0.8);
+}
+45% {
+text-shadow: -1px 1px 8px rgba(255, 255, 255, 0.6), 1px -1px 8px rgba(255, 255, 235, 0.7), 5px 0 1px rgba(251, 0, 231, 0.8), 0 5px 1px rgba(0, 233, 235, 0.8), -5px 0 1px rgba(0, 242, 14, 0.8), 0 -5px 1px rgba(244, 45, 0, 0.8), 5px 0 1px rgba(59, 0, 226, 0.8);
+}
+50% {
+text-shadow: -1px 1px 8px rgba(255, 255, 255, 0.6), 1px -1px 8px rgba(255, 255, 235, 0.7), -5px 0 1px rgba(251, 0, 231, 0.8), 0 -5px 1px rgba(0, 233, 235, 0.8), 5px 0 1px rgba(0, 242, 14, 0.8), 0 5px 1px rgba(244, 45, 0, 0.8), -5px 0 1px rgba(59, 0, 226, 0.8);
+}
+55% {
+text-shadow: -1px 1px 8px rgba(255, 255, 255, 0.6), 1px -1px 8px rgba(255, 255, 235, 0.7), 0px 0 3px rgba(251, 0, 231, 0.8), 0 0px 3px rgba(0, 233, 235, 0.8), 0px 0 3px rgba(0, 242, 14, 0.8), 0 0px 3px rgba(244, 45, 0, 0.8), 0px 0 3px rgba(59, 0, 226, 0.8);
+}
+90% {
+text-shadow: -1px 1px 8px rgba(255, 255, 255, 0.6), 1px -1px 8px rgba(255, 255, 235, 0.7), -5px 0 1px rgba(251, 0, 231, 0.8), 0 5px 1px rgba(0, 233, 235, 0.8), 5px 0 1px rgba(0, 242, 14, 0.8), 0 -5px 1px rgba(244, 45, 0, 0.8), 5px 0 1px rgba(59, 0, 226, 0.8);
+}
+100% {
+text-shadow: -1px 1px 8px rgba(255, 255, 255, 0.6), 1px -1px 8px rgba(255, 255, 235, 0.7), 5px 0 1px rgba(251, 0, 231, 0.8), 0 -5px 1px rgba(0, 233, 235, 0.8), -5px 0 1px rgba(0, 242, 14, 0.8), 0 5px 1px rgba(244, 45, 0, 0.8), -5px 0 1px rgba(59, 0, 226, 0.8);
+}
+}
+
+</style></div>
+
+<style>
+#vinyl-gallery * {
+    all: unset;
+  }
+ 
+  #vinyl-gallery {
+    all: initial!important;
+    width: 100%!important;
+    height: 230px!important;
+    margin: 30px 0!important;
+    display: flex!important;
+    flex-direction: row!important;
+    position: relative!important;
+    margin-left: -6px!important;
+  }
+ 
+  #vinyl-gallery .vinyl {
+      all:unset!important;
+    perspective: 500px !important;
+    width: 18px!important;
+    transition: width 0.5s!important;
+  }
+ 
+  #vinyl-gallery .vinyl:hover {
+    width: 148px!important;
+  }
+ 
+  #vinyl-gallery img {
+      all:unset!important;
+    transition: transform 0.5s, width 0.5s, height 0.5s, margin-top 0.5s!important;
+    width: 180px!important;
+    height: 180px!important;
+    transform: rotateX(0deg) rotateY(25deg)!important;
+    transform-style: preserve-3d!important;
+    border-radius: 4px!important;
+    border: 2px solid rgba(0, 0, 0, 0.1)!important;
+object-fit: cover!important;
+  }
+ 
+  #vinyl-gallery .vinyl:hover img {
+    transform: rotateX(0deg) rotateY(10deg)!important;
+    width: 188px!important;
+    height: 188px!important;
+    margin-top: -2px!important;
+  }
+ 
+  #vinyl-gallery .title {
+    color: #000000;
+    display: block;
+    visibility: hidden;
+    position: absolute;
+    bottom: 0px;
+    text-align: center;
+    width: 100%;
+    padding-left: 6px;
+  }
+ 
+  #vinyl-gallery .vinyl:nth-child(n):hover + .title {
+    visibility: visible;
+  }
+
+</style>
+<div id="vinyl-gallery">
+  <div class="vinyl">
+    <img src="https://i.scdn.co/image/ab67616d0000b273e6821e3cfe259a34dfdd2de8"/>
+  </div>
+  <div class="title">Lil Peep - Come Over When You're Sober, Pt. 2 (Og Version)</div>
+
+  <div class="vinyl">
+    <img src="https://images.genius.com/263fecf9dd76c365da8c9d200de5fc52.1000x1000x1.jpg"/>
+  </div>
+  <div class="title">Ghostmane - Hexada</div>
+
+  <div class="vinyl">
+    <img src="https://i.scdn.co/image/ab67616d0000b2737468a9842c275c09fe58c000"/>
+  </div>
+  <div class="title">Happy Days - Happiness Stops Here...</div>
+
+  <div class="vinyl">
+    <img src="https://i.scdn.co/image/ab67616d0000b2739fd952223df9ce654688138f"/>
+  </div>
+  <div class="title">Lil Peep - CASTLES II</div>
+
+  <div class="vinyl">
+    <img src="https://i.scdn.co/image/ab67616d0000b273b25093d7ccdce4a848988f9e"/>
+  </div>
+  <div class="title">$uicideBoy$ - Long Term Effects of SUFFERING</div>
+
+  
+</div>
+
+// created by https://spacehey.com/skullst21k , (c)2025
